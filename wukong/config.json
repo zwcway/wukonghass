@@ -1,6 +1,6 @@
 {
   "name": "wukong",
-  "version": "latest",
+  "version": "1.8.0",
   "slug": "wukong",
   "description": "wukong by wzpan",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
