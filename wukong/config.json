@@ -10,7 +10,7 @@
   "boot": "auto",
   "options": {},
   "schema": {},
-  "devices": ['dev/snd:/dev/snd'],
+  "audio": "true"
   "ports": {
     "5000/tcp": 5000
   }
