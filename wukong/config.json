@@ -9,5 +9,8 @@
   "startup": "before",
   "boot": "auto",
   "options": {},
-  "schema": {}
+  "schema": {},
+  "ports": {
+    "5000/tcp": 5000
+  }
 }
