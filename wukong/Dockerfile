@@ -1,3 +1,4 @@
+LABEL io.hass.version="1.8.0" io.hass.type="addon" io.hass.arch="armhf|aarch64|i386|amd64"
 ARG BUILD_FROM=wzpan/wukong-robot-arm:1.8.0
 MAINTAINER wzpan
 WORKDIR /root/wukong-robot
