@@ -5,7 +5,7 @@
   "description": "wukong by wzpan",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "webui": "http://[HOST]:[PORT:5000]",
-  "image": "wzpan/wukong-robot-arm:latest",
+  "image": "wzpan/wukong-robot-arm",
   "startup": "before",
   "boot": "auto",
   "options": {},
