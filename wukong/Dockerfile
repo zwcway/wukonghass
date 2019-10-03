@@ -1,4 +1,4 @@
-ABEL io.hass.version="1.8.0.hass.type="addon" io.hass.arch="armhf|aarch64|i386|amd64"FROM wzpan/wukong-robot-arm:1.8.0
+ARG BUILD_FROM=wzpan/wukong-robot-arm:1.8.0
 MAINTAINER wzpan
 WORKDIR /root/wukong-robot
 RUN git pull -f
