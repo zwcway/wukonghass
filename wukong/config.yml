@@ -189,6 +189,10 @@ statistic: true # 是否开启上报
 # 在这里放第三方插件的配置
 # https://github.com/wzpan/wukong-contrib
 
+homeassistant:
+    url: "http://localhost"   #切记加上http://，ip或者域名为你的homeassistant的主机
+    port: "8123"             # 端口为你的homeassistant的端口和网页端口一样
+    
 # 百度FM
 baidufm:
     channel: 14
