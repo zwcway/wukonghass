@@ -6,6 +6,8 @@
   "url": "wukong.hahack.com",
   "arch": ["armhf", "armv7", "aarch64"],
   "webui": "http://[HOST]:[PORT:5000]",
+  "auth_api": "true",
+  "homeassistant_api": "true",
   "startup": "application",
   "boot": "auto",
   "options": {},
