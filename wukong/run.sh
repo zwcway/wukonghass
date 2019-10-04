@@ -1,1 +1,1 @@
-python3 wukong.py
+python3 wukong-robot/wukong.py
