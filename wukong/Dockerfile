@@ -12,4 +12,4 @@ EXPOSE 5000
 COPY run.sh /
 RUN chmod a+x /run.sh
 
-CMD [ "echo yes|/run.sh" ]
+CMD [ "/run.sh" ]
