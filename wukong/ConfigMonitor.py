@@ -31,6 +31,7 @@ class ConfigMonitor(FileSystemEventHandler):
                 config.reload()
                 logger.info("uploading changed profile.")
                 ftp.cwd('/wukongdata')
+                ftp.delete(config.yml)
                 fp = open(localfile, 'rb')
                 ftp.storbinary('STOR %s' % os.path.basename(/root/.wukong/config.yml), fp, 1024)
                 fp.close()
