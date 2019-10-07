@@ -11,6 +11,8 @@ WORKDIR /root/wukong-robot
 EXPOSE 5000
 COPY run.sh /
 COPY config.yml /root/.wukong/
+RUN rm -rf /root/wukong-robot/ConfigMonitor.py
+COPY ConfigMonitor.py /root/wukong-robot/
 
 RUN chmod a+x /run.sh
 
