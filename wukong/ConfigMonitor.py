@@ -8,11 +8,7 @@ import os
 import fileinput
 
 logger = logging.getLogger(__name__)
-ftp = FTP()
-ftp.set_debuglevel(2)
-ftp.connect('192.168.1.229', 21) 
-ftp.login('hassio','xj780224')
-localfile="/root/.wukong/config.yml"
+
 
 class ConfigMonitor(FileSystemEventHandler):
     def __init__(self, conversation):
@@ -31,6 +27,11 @@ class ConfigMonitor(FileSystemEventHandler):
                 logger.info("检测到文件 {} 发生变更".format(filename))
                 config.reload()
                 logger.info("uploading changed profile.")
+                ftp = FTP()
+                ftp.set_debuglevel(2)
+                ftp.connect('192.168.1.229', 21) 
+                ftp.login('hassio','xj780224')
+                localfile="/root/.wukong/config.yml"
                 ftp.cwd('/share/wukongdata')
                 ftp.delete(config.yml)
                 fp = open(localfile, 'rb')
