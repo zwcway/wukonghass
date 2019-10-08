@@ -10,9 +10,8 @@ RUN pip3 install -r requirements.txt
 WORKDIR /root/wukong-robot
 EXPOSE 5000
 COPY run.sh /
-COPY config.yml /root/.wukong/
-RUN rm -rf /root/wukong-robot/ConfigMonitor.py
-COPY ConfigMonitor.py /root/wukong-robot/
+RUN rm -rf /root/wukong-robot/robot/ConfigMonitor.py
+COPY ConfigMonitor.py /root/wukong-robot/robot/ConfigMonitor.py
 
 RUN chmod a+x /run.sh
 
