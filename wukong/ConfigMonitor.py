@@ -4,7 +4,6 @@ import os
 from robot import config, utils, logging
 from watchdog.events import FileSystemEventHandler
 from ftplib import FTP 
-import os
 import fileinput
 
 logger = logging.getLogger(__name__)
