@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 ftp = FTP()
 ftp.set_debuglevel(2)
 ftp.connect('ftp://localhost', 21) 
-ftp.login('hassio','admin123')
+ftp.login('hassio','xj780224')
 
 class ConfigMonitor(FileSystemEventHandler):
     def __init__(self, conversation):
