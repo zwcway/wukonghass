@@ -28,7 +28,7 @@ class ConfigMonitor(FileSystemEventHandler):
                 logger.info("uploading changed profile.")
                 ftp = FTP()
                 ftp.set_debuglevel(2)
-                ftp.connect('192.168.0.1', 21) 
+                ftp.connect('192.168.1.229', 21) 
                 ftp.login('hassio','wukong2019hassio')
                 ftp.cwd('share/wukongdata')
                 ftp.delete("config.yml")
