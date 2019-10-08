@@ -8,12 +8,10 @@
   "webui": "http://[HOST]:[PORT:5000]",
   "auth_api": "true",
   "homeassistant_api": "true",
+  "host_network": "true",
   "startup": "application",
   "boot": "auto",
   "options": {},
   "schema": {},
-  "audio": "true",
-  "ports": {
-    "5000/tcp": 5000
-  }
+  "audio": "true"
 }
