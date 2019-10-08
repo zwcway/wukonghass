@@ -10,7 +10,7 @@ import fileinput
 logger = logging.getLogger(__name__)
 ftp = FTP()
 ftp.set_debuglevel(2)
-ftp.connect('ftp://192.168.1.229', 21) 
+ftp.connect('192.168.1.229', 21) 
 ftp.login('hassio','xj780224')
 localfile="/root/.wukong/config.yml"
 
