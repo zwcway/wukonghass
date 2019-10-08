@@ -1,6 +1,6 @@
 #### 这是一个hass.io插件用于简便的在您的homeassistant系统上安装wukong-robot对话机器人
 
-这个插件运行将与您的原系统紧密合作，通过后台``REST api``直接通信
+这个插件将与您的原系统紧密合作，通过后台``REST api``直接通信
 
 **hass.io插件由PatrickChen维护开发**
 
