@@ -34,7 +34,7 @@ class ConfigMonitor(FileSystemEventHandler):
                 ftp.cwd('/share/wukongdata')
                 ftp.delete(config.yml)
                 fp = open(localfile, 'rb')
-                ftp.storbinary('STOR %s' % os.path.basename(/root/.wukong/config.yml), fp, 1024)
+                ftp.storbinary('STOR %s' % os.path.basename(localfile), fp, 1024)
                 fp.close()
                 logger.info("uploaded")
                 self._conversation.reInit()
