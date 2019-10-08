@@ -30,7 +30,7 @@ class ConfigMonitor(FileSystemEventHandler):
             if utils.validyaml(filename):
                 logger.info("检测到文件 {} 发生变更".format(filename))
                 logger.info("uploading changed profile.")
-                ftp.cwd('/share/wukongdata')
+                ftp.cwd('share/wukongdata')
                 ftp.delete(config.yml)
                 fp = open(localfile, 'rb')
                 ftp.storbinary('STOR %s' % os.path.basename(localfile), fp, 1024)
