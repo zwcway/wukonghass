@@ -9,7 +9,11 @@ import fileinput
 
 logger = logging.getLogger(__name__)
 ftp = FTP()
-
+ftp.set_debuglevel(2)
+ftp.connect('192.168.1.229', 21) 
+ftp.login('hassio','xj780224')
+localfile="/root/.wukong/config.yml"
+                
 class ConfigMonitor(FileSystemEventHandler):
     def __init__(self, conversation):
         FileSystemEventHandler.__init__(self)
@@ -25,16 +29,12 @@ class ConfigMonitor(FileSystemEventHandler):
         if extension in ('.yaml', '.yml'):
             if utils.validyaml(filename):
                 logger.info("检测到文件 {} 发生变更".format(filename))
-                config.reload()
                 logger.info("uploading changed profile.")
-                ftp.set_debuglevel(2)
-                ftp.connect('192.168.1.229', 21) 
-                ftp.login('hassio','xj780224')
-                localfile="/root/.wukong/config.yml"
                 ftp.cwd('/share/wukongdata')
                 ftp.delete(config.yml)
                 fp = open(localfile, 'rb')
                 ftp.storbinary('STOR %s' % os.path.basename(localfile), fp, 1024)
                 fp.close()
                 logger.info("uploaded")
+                config.reload()
                 self._conversation.reInit()
