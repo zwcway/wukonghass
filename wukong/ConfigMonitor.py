@@ -3,16 +3,12 @@
 import os
 from robot import config, utils, logging
 from watchdog.events import FileSystemEventHandler
+import ftplib
 from ftplib import FTP 
 import fileinput
 
 logger = logging.getLogger(__name__)
 
-def upload(f, remote_path, local_path):
-    fp = open(local_path, "rb")
-    buf_size = 1024
-    f.storbinary("STOR {}".format(remote_path), fp, buf_size)
-    fp.close()
                 
 class ConfigMonitor(FileSystemEventHandler):
     def __init__(self, conversation):
@@ -35,8 +31,12 @@ class ConfigMonitor(FileSystemEventHandler):
                 ftp.connect('192.168.1.229', 21) 
                 ftp.login('hassio','xj780224')
                 ftp.cwd('share/wukongdata')
-                ftp.delete(config.yml)
-                upload(ftp, "/root/.wukong/config.yml", "config.yml")
+                ftp.delete("config.yml")
+                os.chdir("/root/.wukong")
+                file = open('config.yml', "rb")
+                ftp.storbinary('STOR ' + 'config.yml', file)
+                file.close() 
+                ftp.quit() 
                 logger.info("uploaded")
                 config.reload()
                 self._conversation.reInit()
