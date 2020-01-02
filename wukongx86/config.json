@@ -1,5 +1,5 @@
 {
-  "name": "wukong-robot_x86",
+  "name": "wukong-robot_x86-64",
   "version": "latest",
   "slug": "wukong-robot",
   "description": "wukong-robot by wzpan,hassio support by PatrickChen",
