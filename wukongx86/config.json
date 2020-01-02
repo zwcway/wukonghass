@@ -1,10 +1,10 @@
 {
-  "name": "wukong-robot",
+  "name": "wukong-robot_x86",
   "version": "latest",
   "slug": "wukong-robot",
   "description": "wukong-robot by wzpan,hassio support by PatrickChen",
   "url": "http://wukong.hahack.com",
-  "arch": ["armhf", "armv7", "aarch64"],
+  "arch": ["amd64"],
   "webui": "http://[HOST]:[PORT:5000]",
   "auth_api": "true",
   "homeassistant_api": "true",
