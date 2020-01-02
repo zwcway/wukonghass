@@ -1,4 +1,4 @@
-FROM wzpan/wukong-robot-arm:latest
+FROM wzpan/wukong-robot:latest
 MAINTAINER wzpan
 ENV LANG C.UTF-8
 WORKDIR /root/wukong-robot
